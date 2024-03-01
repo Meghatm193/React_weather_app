@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'jost', sans-serif;
+}
+body{
+    background: #f3f2ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'jost', sans-serif;
+}
+html{
+    font-size: 100%;
+    height: 100%;
+    background: #eee;
+}
+.box{
+    width: 25vw;
+    height: 30vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 3rem rgba(0,0,0,0.2);
+    background: #a5bbdd;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    min-width: 20rem;
+    min-height: 35rem;
+    margin-top: 20px;
+}
+.inputData{
+    margin: 10px;
+    text-align: center;
+}
+.inputField{
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    width: 200px;
+    text-align: center;
+}
+.wave{
+    opacity: 0.3;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    background: white;
+    height: 50rem;
+    width: 50rem;
+    margin-left: -25rem;
+    margin-top: -20rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: 1;
+}
+.wave .-three{
+    animation: drift 5000ms infinite linear;
+    opacity: 0.2;
+    z-index: 2 !important;
+}
+.wave .-two{
+    animation: drift 7000ms infinite linear;
+    opacity: 0.1;
+    z-index: 3 !important;
+}
+
+.box:after{
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+@keyframes drift{
+    from{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(360deg);
+    }
+  
+}
